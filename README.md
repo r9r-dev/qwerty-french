@@ -12,18 +12,6 @@ L'AZERTY n'est d'ailleurs pas tant bien que ça adapté à la langue française.
 
 Avec QWERTY-FRENCH, je peux taper des symbôles de monnaies comme la livre sterling `£` ou le yen `¥` mais aussi des symbôles plus modernes comme celui du bitcoin `₿`. Je peux taper des flèches dans les quatre directions `↑←↓→` en une fraction de seconde... et tout cela est facilement mémorisable !
 
-## Immuable
-
-Cette disposition est **immuable** (à partir de la fin des versions notées "pré-version"). La version originale du projet a déplacé certaines touches comme les `ê` ce qui me semble une abberation. Les seules autorisations de modification seront donc les ajouts là où il y a encore de la place.
-
-## Francophone
-
-QWERTY-FRENCH est davantage destiné aux francophones. A trop vouloir contenter de langues, je pense que le projet original s'est petit à petit éloigné de son intérêt de base, à savoir simplifier la saisie de texte en français.
-
-## Note
-
-Ce clavier a été créé pour être le plus simple possible. Il est destiné au personnes qui tapent en français et en anglais. Si vous souhaitez supporter plus de langues, je vous invite à vous rendre sur le projet qui a largement inspiré celui-ci : [qwerty-fr](https://github.com/qwerty-fr/qwerty-fr) créé par Paul @devnoname120. Note que ce projet n'est pas un fork. J'ai repris le projet à zéro.
-
 # Ecrire avec QWERTY-FRENCH
 
 Voici la disposition QWERTY-FRENCH.
@@ -71,3 +59,15 @@ Les clusters U, I et O fonctionnent de manière similaire. Ils disposent tous de
 Presque toutes les touches du clavier s'inspirent de ce système de cluster pour vous aider à les mémoriser. Les clusters C et B sont deux bons exemples. B a deux caractères spéciaux `₿` (bitcoin) et `ꞵ` (beta). Tandis que C a `ç` (c cédille) et `©` (copyright).
 
 ![clusterCB](img/clusters-cb.png).
+
+# Notes sur le projet QWERTY-FR
+
+Ce clavier a été créé pour être le plus simple possible. Il est destiné au personnes qui tapent en français et en anglais. Si vous souhaitez supporter plus de langues, je vous invite à vous rendre sur le projet qui a largement inspiré celui-ci : [qwerty-fr](https://github.com/qwerty-fr/qwerty-fr) créé par Paul @devnoname120. Note que ce projet n'est pas un fork. J'ai repris le projet à zéro.
+
+## QWERTY-FRENCH est Immuable
+
+Cette disposition est **immuable** (à partir de la fin des versions notées "pré-version"). La version originale du projet a déplacé certaines touches comme les `ê` ce qui me semble une abberation. Les seules autorisations de modification seront donc les ajouts là où il y a encore de la place.
+
+## QWERTY-FRENCH est Francophone
+
+QWERTY-FRENCH est davantage destiné aux francophones. A trop vouloir contenter de langues, je pense que le projet original s'est petit à petit éloigné de son intérêt de base, à savoir simplifier la saisie de texte en français.

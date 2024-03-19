@@ -1,6 +1,6 @@
 # French (QWERTY-FRENCH)
 
-Clavier français QWERTY. Ce projet est basé sur l'excellent projet "qwerty-fr" créé par Paul @devnoname120. Suite aux nombreuses modifications apportées depuis la version 0.6, j'ai décidé de créer un nouveau projet qui se rapproche d'avantage de mes usages.
+Clavier français QWERTY. Ce projet est librement inspiré du projet "qwerty-fr" créé par Paul @devnoname120. Suite aux nombreuses modifications apportées depuis la version 0.6, j'ai décidé de créer un nouveau projet qui se rapproche d'avantage de mes usages. Ceci n'est pas un fork, j'ai repris le projet à zéro.
 
 # Fondamentaux
 

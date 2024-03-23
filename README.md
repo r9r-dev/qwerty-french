@@ -1,4 +1,4 @@
-# French (QWERTY-FRENCH)
+# French (QWERTY-FRANÇAIS)
 
 Clavier français QWERTY.
 
@@ -8,19 +8,19 @@ Le clavier français officiel est l'AZERTY. Cependant, étant développeur et é
 
 Utiliser le QWERTY, c'est également utiliser un clavier tout simplement mieux pensé. Par exemple, les parenthèses et les crochets sont plus faciles à mémoriser car ils sont côte à côte. Aussi, le QWERTY est plus largement compatible, notamment dans les jeux-vidéo qui ne supportent pas toujours l'AZERTY.
 
-L'AZERTY n'est d'ailleurs pas tant bien que ça adapté à la langue française. Avec QWERTY-FRENCH, je tape `œ` ou `æ` avec un simple raccourci facilement mémorisable. Je peux également accentuer les majuscules, ce qui est impossible ou compliqué avec l'AZERTY.
+L'AZERTY n'est d'ailleurs pas tant bien que ça adapté à la langue française. Avec QWERTY-FRANÇAIS, je tape `œ` ou `æ` avec un simple raccourci facilement mémorisable. Je peux également accentuer les majuscules, ce qui est impossible ou compliqué avec l'AZERTY.
 
-Avec QWERTY-FRENCH, je peux taper des symbôles de monnaies comme la livre sterling `£` ou le yen `¥` mais aussi des symbôles plus modernes comme celui du bitcoin `₿`. Je peux taper des flèches dans les quatre directions `↑←↓→` en une fraction de seconde... et tout cela est facilement mémorisable !
+Avec QWERTY-FRANÇAIS, je peux taper des symbôles de monnaies comme la livre sterling `£` ou le yen `¥` mais aussi des symbôles plus modernes comme celui du bitcoin `₿`. Je peux taper des flèches dans les quatre directions `↑←↓→` en une fraction de seconde... et tout cela est facilement mémorisable !
 
-# Ecrire avec QWERTY-FRENCH
+# Ecrire avec QWERTY-FRANÇAIS
 
-Voici la disposition QWERTY-FRENCH.
+Voici la disposition QWERTY-FRANÇAIS.
 
-![QWERTY-FRENCH](img/layout.png)
+![QWERTY-FRANÇAIS](img/layout.png)
 
-# Comment mémoriser facilement le QWERTY-FRENCH ?
+# Comment mémoriser facilement le QWERTY-FRANÇAIS ?
 
-Le layout QWERTY-FRENCH est facile à apprendre grâce à son système de clusters. Comme stipulé plus haut, il suffit de retenir la direction à partir d'un caractère donné pour obtenir une version alternative en appuyant sur `AltGr`. Le comportement est toujours le même.
+Le layout QWERTY-FRANÇAIS est facile à apprendre grâce à son système de clusters. Comme stipulé plus haut, il suffit de retenir la direction à partir d'un caractère donné pour obtenir une version alternative en appuyant sur `AltGr`. Le comportement est toujours le même.
 
 ![clusters](img/clusters.png)
 
@@ -64,10 +64,10 @@ Presque toutes les touches du clavier s'inspirent de ce système de cluster pour
 
 Ce clavier a été créé pour être le plus simple possible. Il est destiné au personnes qui tapent en français et en anglais. Si vous souhaitez supporter plus de langues, je vous invite à vous rendre sur le projet qui a largement inspiré celui-ci : [qwerty-fr](https://github.com/qwerty-fr/qwerty-fr) créé par Paul @devnoname120. Note que ce projet n'est pas un fork. J'ai repris le projet à zéro.
 
-## QWERTY-FRENCH est Immuable
+## QWERTY-FRANÇAIS est Immuable
 
 Cette disposition est **immuable** (à partir de la fin des versions notées "pré-version"). La version originale du projet a déplacé certaines touches comme les `ê` ce qui me semble une abberation. Les seules autorisations de modification seront donc les ajouts là où il y a encore de la place.
 
-## QWERTY-FRENCH est Francophone
+## QWERTY-FRANÇAIS est Francophone
 
-QWERTY-FRENCH est davantage destiné aux francophones. A trop vouloir contenter de langues, je pense que le projet original s'est petit à petit éloigné de son intérêt de base, à savoir simplifier la saisie de texte en français.
+QWERTY-FRANÇAIS est davantage destiné aux francophones. A trop vouloir contenter de langues, je pense que le projet original s'est petit à petit éloigné de son intérêt de base, à savoir simplifier la saisie de texte en français.

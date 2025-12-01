@@ -1,0 +1,38 @@
+# GitLab CI/CD configuration for GitLab Pages
+# This file automatically deploys the site to GitLab Pages
+
+# Define the pages job
+pages:
+  # Use a lightweight Alpine Linux image
+  image: alpine:latest
+
+  # Define the build script
+  script:
+    # Create the public directory for GitLab Pages
+    - mkdir -p public
+
+    # Copy the main HTML file
+    - cp index.html public/
+
+    # Copy the images directory
+    - cp -r img public/
+
+    # Copy the keyboard layout files
+    - cp -r kbdedit_layout public/
+
+    # Copy the LICENSE file
+    - cp LICENSE.md public/
+
+    # Copy the README for reference
+    - cp README.md public/
+
+  # Artifacts are the files that will be served by GitLab Pages
+  artifacts:
+    paths:
+      - public
+
+  # Only run this job on the main/master branch
+  # Adjust the branch name if needed (main, master, or another branch)
+  only:
+    - main
+    - master

@@ -3,103 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>French (QWERTY-FRANÇAIS) - Clavier français QWERTY</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown.min.css">
+    <title>QWERTY-FRANÇAIS - Clavier français QWERTY moderne</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #24292e;
-            background-color: #ffffff;
+        * {
             margin: 0;
             padding: 0;
-        }
-        .container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 45px;
-        }
-        .markdown-body {
             box-sizing: border-box;
-            min-width: 200px;
-            max-width: 980px;
+        }
+
+        :root {
+            --bg-primary: #0f0f1e;
+            --bg-secondary: #1a1a2e;
+            --bg-card: #16213e;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border-color: #2d3748;
+            --success: #10b981;
+            --glow: rgba(99, 102, 241, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
             margin: 0 auto;
         }
-        .markdown-body img {
-            max-width: 100%;
-            background-color: transparent;
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px 0;
-            margin-bottom: 40px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        header .container {
-            padding: 0 45px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: 600;
-        }
-        header p {
-            margin: 10px 0 0 0;
-            font-size: 1.2em;
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
             opacity: 0.95;
+            font-weight: 300;
         }
-        .download-section {
-            background-color: #f6f8fa;
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
-            padding: 20px;
-            margin: 20px 0;
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
         }
-        .download-button {
-            display: inline-block;
-            background-color: #2ea44f;
+
+        /* Download Card */
+        .download-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .download-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        .download-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: white;
-            padding: 12px 24px;
+            padding: 1rem 2rem;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 12px;
             font-weight: 600;
-            margin-right: 10px;
-            transition: background-color 0.2s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
         }
-        .download-button:hover {
-            background-color: #2c974b;
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.5);
         }
-        footer {
-            margin-top: 60px;
-            padding: 30px 0;
+
+        .download-info {
+            margin-top: 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Content Sections */
+        .section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            color: var(--text-primary);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        code {
+            background: var(--bg-secondary);
+            color: var(--accent-primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 0.9em;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Image Styling */
+        .image-container {
+            margin: 2rem 0;
             text-align: center;
-            color: #6a737d;
-            border-top: 1px solid #e1e4e8;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Links */
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-secondary);
+            text-decoration: underline;
+        }
+
+        /* Feature Badges */
+        .feature-badge {
+            display: inline-block;
+            background: var(--bg-secondary);
+            color: var(--accent-primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0.2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--accent-primary);
+            color: white;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
             <h1>🇫🇷 QWERTY-FRANÇAIS</h1>
-            <p>Clavier français QWERTY - Le meilleur des deux mondes</p>
+            <p class="hero-subtitle">Le meilleur des deux mondes : la puissance du QWERTY avec les accents français</p>
         </div>
-    </header>
+    </section>
 
+    <!-- Main Content -->
     <div class="container">
-        <div class="download-section">
-            <h3>📥 Télécharger le layout</h3>
-            <a href="kbdedit_layout/French (QWERTY-FRANÇAIS).kbe" class="download-button" download>Télécharger .kbe</a>
-            <p style="margin-top: 10px; color: #586069;">Fichier de disposition pour KbdEdit</p>
+        <!-- Download Section -->
+        <div class="download-card">
+            <h3>📦 Télécharger le layout</h3>
+            <a href="kbdedit_layout/French (QWERTY-FRANÇAIS).kbe" class="download-btn" download>
+                ⬇️ Télécharger QWERTY-FRANÇAIS.kbe
+            </a>
+            <p class="download-info">Fichier de disposition pour KbdEdit (Windows)</p>
         </div>
 
-        <article class="markdown-body" id="content">
-            <h1>French (QWERTY-FRANÇAIS)</h1>
-
-            <p>Clavier français QWERTY.</p>
-
-            <h1>Motivation</h1>
+        <!-- Motivation Section -->
+        <section class="section">
+            <h1>💡 Motivation</h1>
 
             <p>Le clavier français officiel est l'AZERTY. Cependant, étant développeur et écrivant beaucoup de texte en anglais, j'ai toujours préféré le clavier QWERTY. Le problème est que le clavier QWERTY n'est pas adapté à la langue française. Si vous êtes comme moi, vous utilisez probablement le clavier US International qui demande d'utiliser de nombreuses touches mortes pour écrire en français. C'est un peu pénible.</p>
 
@@ -108,76 +305,86 @@
             <p>L'AZERTY n'est d'ailleurs pas tant bien que ça adapté à la langue française. Avec QWERTY-FRANÇAIS, je tape <code>œ</code> ou <code>æ</code> avec un simple raccourci facilement mémorisable. Je peux également accentuer les majuscules, ce qui est impossible ou compliqué avec l'AZERTY.</p>
 
             <p>Avec QWERTY-FRANÇAIS, je peux taper des symbôles de monnaies comme la livre sterling <code>£</code> ou le yen <code>¥</code> mais aussi des symbôles plus modernes comme celui du bitcoin <code>₿</code>. Je peux taper des flèches dans les quatre directions <code>↑←↓→</code> en une fraction de seconde... et tout cela est facilement mémorisable !</p>
+        </section>
 
-            <h1>Ecrire avec QWERTY-FRANÇAIS</h1>
+        <!-- Layout Section -->
+        <section class="section">
+            <h1>⌨️ Disposition QWERTY-FRANÇAIS</h1>
+            <p>Voici la disposition complète du clavier QWERTY-FRANÇAIS.</p>
+            <div class="image-container">
+                <img src="img/layout.png" alt="Disposition QWERTY-FRANÇAIS">
+            </div>
+        </section>
 
-            <p>Voici la disposition QWERTY-FRANÇAIS.</p>
+        <!-- Clusters Section -->
+        <section class="section">
+            <h1>🎯 Système de clusters</h1>
 
-            <p><img src="img/layout.png" alt="QWERTY-FRANÇAIS"></p>
+            <p>Le layout QWERTY-FRANÇAIS est facile à apprendre grâce à son système de clusters. Il suffit de retenir la direction à partir d'un caractère donné pour obtenir une version alternative en appuyant sur <code>AltGr</code>. Le comportement est toujours le même.</p>
 
-            <h1>Comment mémoriser facilement le QWERTY-FRANÇAIS ?</h1>
-
-            <p>Le layout QWERTY-FRANÇAIS est facile à apprendre grâce à son système de clusters. Comme stipulé plus haut, il suffit de retenir la direction à partir d'un caractère donné pour obtenir une version alternative en appuyant sur <code>AltGr</code>. Le comportement est toujours le même.</p>
-
-            <p><img src="img/clusters.png" alt="clusters"></p>
+            <div class="image-container">
+                <img src="img/clusters.png" alt="Système de clusters">
+            </div>
 
             <ul>
-            <li>Sur la touche, ce sera soit le caractère avec un accent grave ou un caractère spécial qui fait penser au caractère de base</li>
-            <li>A gauche, ce sera toujours le caractère avec un accent aigu</li>
-            <li>Au dessus, ce sera toujours le caractère avec un accent circonflexe</li>
-            <li>En dessous, ce sera soit le caractère avec un tréma ou la version "collée" (soit <code>æ</code> ou <code>œ</code>)</li>
-            <li>A droite, ce sera un caractère spécial qui fait penser au caractère de base</li>
+                <li><strong>Sur la touche</strong> : caractère avec un accent grave ou un caractère spécial</li>
+                <li><strong>À gauche</strong> : toujours le caractère avec un accent aigu</li>
+                <li><strong>Au-dessus</strong> : toujours le caractère avec un accent circonflexe</li>
+                <li><strong>En dessous</strong> : caractère avec un tréma ou la version "collée" (<code>æ</code> ou <code>œ</code>)</li>
+                <li><strong>À droite</strong> : caractère spécial qui fait penser au caractère de base</li>
             </ul>
 
             <p>Taper les caractères les plus courants de la langue française est donc d'une grande simplicité. Voici un exemple avec la lettre E.</p>
 
-            <p><img src="img/accents.png" alt="accents"></p>
+            <div class="image-container">
+                <img src="img/accents.png" alt="Exemple d'accents">
+            </div>
 
-            <p>Tous les caractères n'ont pas besoin d'accent aigu, grave, circonflexe et tréma. Si vous tapez sur une touche avec <code>AltGr</code> et que le résultat n'est pas parmi les règles ci-dessus, c'est qu'il n'est pas utilisé dans la langue française. Par exemple, si vous tapez <code>AltGr</code> + <code>U</code>, vous obtiendrez <code>ù</code> mais cela ne fonctionne pas pour <code>AltGr</code> + <code>O</code> vu que <code>ò</code> n'est pas utilisé dans la langue française. Ainsi, la règle des caractères spéciaux permet de le remplacer par le symbôle <code>omega</code> <code>Ω</code> (<em>un caractère spécial qui fait penser au caractère de base</em>).</p>
+            <p>Tous les caractères n'ont pas besoin d'accent aigu, grave, circonflexe et tréma. Si vous tapez sur une touche avec <code>AltGr</code> et que le résultat n'est pas parmi les règles ci-dessus, c'est qu'il n'est pas utilisé dans la langue française. Par exemple, si vous tapez <code>AltGr</code> + <code>U</code>, vous obtiendrez <code>ù</code> mais cela ne fonctionne pas pour <code>AltGr</code> + <code>O</code> vu que <code>ò</code> n'est pas utilisé dans la langue française. Ainsi, la règle des caractères spéciaux permet de le remplacer par le symbôle <code>omega</code> <code>Ω</code>.</p>
 
             <h2>Le cluster A</h2>
-
-            <p>Le cluster A fonctionne de manière normale pour <code>à</code> (<code>AltGr</code> + <code>A</code>) et <code>â</code> (<code>AltGr</code> + <code>Q</code>). A droite, vous obtiendrez <code>alpha</code> <code>ɑ</code> et en dessous, le caractère <code>æ</code>.</p>
-
-            <p><img src="img/cluster-a.png" alt="clusterA">.</p>
+            <p>Le cluster A fonctionne de manière normale pour <code>à</code> (<code>AltGr</code> + <code>A</code>) et <code>â</code> (<code>AltGr</code> + <code>Q</code>). À droite, vous obtiendrez <code>alpha</code> <code>ɑ</code> et en dessous, le caractère <code>æ</code>.</p>
+            <div class="image-container">
+                <img src="img/cluster-a.png" alt="Cluster A">
+            </div>
 
             <h2>Le cluster E</h2>
-
             <p>Le cluster E est le plus simple. Comme expliqué dans l'exemple précédent.</p>
+            <div class="image-container">
+                <img src="img/cluster-e.png" alt="Cluster E">
+            </div>
 
-            <p><img src="img/cluster-e.png" alt="clusterE">.</p>
-
-            <h2>Les cluster U, I et O</h2>
-
-            <p>Les clusters U, I et O fonctionnent de manière similaire. Ils disposent tous de leur version avec accent circonflexe au dessus. En dessous, le tréma est utilisé. Seul le cluster O fait exception avec <code>Ω</code> et <code>œ</code> en dessous.</p>
-
-            <p><img src="img/clusters-uio.png" alt="clusterUIO">.</p>
+            <h2>Les clusters U, I et O</h2>
+            <p>Les clusters U, I et O fonctionnent de manière similaire. Ils disposent tous de leur version avec accent circonflexe au-dessus. En dessous, le tréma est utilisé. Seul le cluster O fait exception avec <code>Ω</code> et <code>œ</code> en dessous.</p>
+            <div class="image-container">
+                <img src="img/clusters-uio.png" alt="Clusters UIO">
+            </div>
 
             <h2>Les autres clusters</h2>
-
             <p>Presque toutes les touches du clavier s'inspirent de ce système de cluster pour vous aider à les mémoriser. Les clusters C et B sont deux bons exemples. B a deux caractères spéciaux <code>₿</code> (bitcoin) et <code>ꞵ</code> (beta). Tandis que C a <code>ç</code> (c cédille) et <code>©</code> (copyright).</p>
+            <div class="image-container">
+                <img src="img/clusters-cb.png" alt="Clusters CB">
+            </div>
+        </section>
 
-            <p><img src="img/clusters-cb.png" alt="clusterCB">.</p>
+        <!-- About Section -->
+        <section class="section">
+            <h1>📝 Notes sur le projet</h1>
 
-            <h1>Notes sur le projet QWERTY-FR</h1>
+            <p>Ce clavier a été créé pour être le plus simple possible. Il est destiné aux personnes qui tapent en français et en anglais. Si vous souhaitez supporter plus de langues, je vous invite à vous rendre sur le projet qui a largement inspiré celui-ci : <a href="https://github.com/qwerty-fr/qwerty-fr">qwerty-fr</a> créé par Paul @devnoname120. Note que ce projet n'est pas un fork. J'ai repris le projet à zéro.</p>
 
-            <p>Ce clavier a été créé pour être le plus simple possible. Il est destiné au personnes qui tapent en français et en anglais. Si vous souhaitez supporter plus de langues, je vous invite à vous rendre sur le projet qui a largement inspiré celui-ci : <a href="https://github.com/qwerty-fr/qwerty-fr">qwerty-fr</a> créé par Paul @devnoname120. Note que ce projet n'est pas un fork. J'ai repris le projet à zéro.</p>
+            <h2>🔒 QWERTY-FRANÇAIS est Immuable</h2>
+            <p>Cette disposition est <strong>immuable</strong> (à partir de la fin des versions notées "pré-version"). La version originale du projet a déplacé certaines touches comme les <code>ê</code> ce qui me semble une aberration. Les seules autorisations de modification seront donc les ajouts là où il y a encore de la place.</p>
 
-            <h2>QWERTY-FRANÇAIS est Immuable</h2>
-
-            <p>Cette disposition est <strong>immuable</strong> (à partir de la fin des versions notées "pré-version"). La version originale du projet a déplacé certaines touches comme les <code>ê</code> ce qui me semble une abberation. Les seules autorisations de modification seront donc les ajouts là où il y a encore de la place.</p>
-
-            <h2>QWERTY-FRANÇAIS est Francophone</h2>
-
-            <p>QWERTY-FRANÇAIS est davantage destiné aux francophones. A trop vouloir contenter de langues, je pense que le projet original s'est petit à petit éloigné de son intérêt de base, à savoir simplifier la saisie de texte en français.</p>
-        </article>
+            <h2>🇫🇷 QWERTY-FRANÇAIS est Francophone</h2>
+            <p>QWERTY-FRANÇAIS est davantage destiné aux francophones. À trop vouloir contenter de langues, je pense que le projet original s'est petit à petit éloigné de son intérêt de base, à savoir simplifier la saisie de texte en français.</p>
+        </section>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>QWERTY-FRANÇAIS - Un projet de disposition de clavier pour francophones</p>
-            <p>Sous licence MIT - Consultez le fichier <a href="LICENSE.md">LICENSE.md</a> pour plus de détails</p>
-        </div>
+        <p><strong>QWERTY-FRANÇAIS</strong> - Disposition de clavier pour francophones</p>
+        <p>Sous licence MIT - Consultez le fichier <a href="LICENSE.md">LICENSE.md</a> pour plus de détails</p>
     </footer>
 </body>
 </html>
